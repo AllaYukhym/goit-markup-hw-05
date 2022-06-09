@@ -278,6 +278,10 @@ p {
 }
 
 /* --------------------------Directions----------------------------- */
+.directions {
+  padding-top: 0;
+}
+
 .directions .list {
   display: flex;
 }
@@ -298,8 +302,31 @@ p {
   color: var(--secondary-text-color);
 }
 
-.directions {
-  padding-top: 0;
+.img-thumb {
+  position: relative;
+}
+
+.item-directions {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* -----what is better or what is right?---- */
+  /* display: block;
+  text-align: center;
+  padding-top: 27px;
+  padding-bottom: 27px; */
+
+  width: 370px;
+  height: 70px;
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--white-color);
+  background-color: rgba(47, 48, 58, 0.8);
 }
 
 /* -----------------------------Team---------------------------------- */
@@ -605,4 +632,28 @@ p {
   line-height: 1.9;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
+}
+
+.examples-top-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-top-text {
+  position: absolute;
+  top: 0;
+  padding: 63px 24px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  height: 100%;
+  color: var(--white-color);
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.examples .link:hover .img-top-text,
+.examples .link:focus .img-top-text {
+  transform: translateY(0%);
 }
